@@ -1,0 +1,37 @@
+import matplotlib.pyplot as plt
+import numpy as np
+import random
+
+# Define the color palette
+color_list = [(239, 240, 243), (50, 90, 148), (235, 151, 89), (207, 10, 51), (146, 66, 99),
+              (232, 208, 90), (237, 69, 105), (59, 174, 71), (124, 182, 164), (60, 137, 110),
+              (117, 166, 209), (249, 67, 24), (199, 145, 168), (241, 248, 244), (117, 89, 65),
+              (137, 108, 184), (177, 181, 9), (2, 106, 74), (201, 211, 6), (45, 42, 101),
+              (1, 85, 116), (178, 199, 179), (64, 60, 56), (76, 47, 54), (40, 163, 210),
+              (44, 35, 89), (218, 175, 187), (231, 172, 163)]
+
+# Create a figure and axis
+fig, ax = plt.subplots()
+
+# Set the aspect ratio to be equal so the dots are round
+ax.set_aspect('equal')
+
+# Turn off the axis
+ax.axis('off')
+
+# Define the number of rows and columns in the grid
+rows, cols = 10, 10  # Adjust as needed
+
+# Calculate the spacing between dots
+dot_spacing = 20
+
+for row in range(rows):
+    for col in range(cols):
+        x = col * dot_spacing
+        y = row * dot_spacing
+        color = random.choice(color_list)
+        size = 500
+        ax.scatter(x, y, c=np.array(color) / 255, s=size, marker='o')
+
+# Display the dot painting
+plt.show()
