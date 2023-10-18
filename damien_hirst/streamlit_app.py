@@ -6,7 +6,7 @@ from io import BytesIO
 from my_fonts import font_style, my_text_header, my_text_paragraph
 
 st.set_page_config(
-    page_title="Dotty",
+    page_title="Dotties",
     layout="centered",
     page_icon="🟣",
     initial_sidebar_state="expanded"
