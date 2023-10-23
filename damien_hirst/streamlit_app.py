@@ -45,7 +45,7 @@ class DotPainter:
         with st.sidebar:
             col1, col2, col3 = st.columns([1, 2, 1])
             with col2:
-                st.image('./images/dotty_logo.svg', width=250)  # logo
+                st.image('https://raw.githubusercontent.com/tonyhollaar/art/main/damien_hirst/images/dotty_logo.svg', width=250)  # logo
         my_text_header('CREATE YOUR SPOT PAINTING', my_font_family='Oswald')
         vertical_spacer(2)
         self.color_list = []
@@ -268,7 +268,6 @@ class DotPainter:
             ####################################################################################
             # Perceptually Uniform Sequential
             ####################################################################################
-
             elif color_style == "Viridis":
                 # Use the 'viridis' color map from Matplotlib
                 self.color_list = [cm.viridis(x) for x in np.linspace(0, 1, 25)]
