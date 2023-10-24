@@ -246,11 +246,13 @@ class DotPainter:
 
                 # Call the get_color_list function to set self.color_list based on the selected color_style
                 self.color_list = get_color_list(color_style, num_colors)
+
             with col3:
                 shape = st.selectbox("Dot Shape", ["circle", "square", "triangle", "pentagon", "hexagon", "diamond"])
                 canvas_shape = st.selectbox("Shape", ["square", "circle1", "circle2", "golden ratio", "barnsley fern"], index=0)
                 canvas_size = st.slider("Canvas Size", 70, 800, 228)
                 figsize_ratio = st.slider("Figsize Ratio", 0.1, 10.0, 3.33)
+
             with col2:
                 if canvas_shape == "barnsley fern":
                     n = st.slider('Number of points in the Fern', 100, 10000, 1000)  # Barnsley Fern Shape

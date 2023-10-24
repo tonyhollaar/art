@@ -1,6 +1,6 @@
-import matplotlib.cm as cm
 import streamlit as st
-
+import matplotlib.cm as cm
+import numpy as np
 
 def get_color_list(color_style, num_colors):
     if color_style == "Pop Art":
